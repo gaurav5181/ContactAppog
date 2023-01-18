@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#5A5656">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:src="@drawable/contact">
+
+    </ImageView>
+
+
+    <EditText
+
+        android:id="@+id/ename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name:"
+        android:textColorHint="@color/white"
+        android:background="#2196F3"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        />
+
+    <EditText
+
+        android:id="@+id/enumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number:"
+        android:textColorHint="@color/white"
+        android:background="#03A9F4"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+    </EditText>
+
+    <Button
+
+        android:id="@+id/addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginTop="35sp"
+        android:layout_gravity="center"
+        >
+
+
+    </Button>
+
+</LinearLayout>
