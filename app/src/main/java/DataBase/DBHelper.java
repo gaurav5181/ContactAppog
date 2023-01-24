@@ -1,10 +1,13 @@
-package com.example.contactapp;
+package DataBase;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(@Nullable Context context)
@@ -35,4 +38,35 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(querry);
 
     }
+    public Cursor viewdata()
+    {
+          String query = "select * from Contacts";
+          SQLiteDatabase db = getReadableDatabase();
+          Cursor cursor = db.rawQuery(query,null);
+          return cursor;
+
+
+    }
+    public void updatedata(int id,String name,String contact){
+
+
+        String querry="update contacts set name='"+name+"', contact = '"+contact+"' where id = "+id+"";
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL(querry);
+
+
+
+    }
+    public void deletedat(int id){
+
+       String querry="delete from contacts where id ="+id+"";
+       SQLiteDatabase db = getWritableDatabase();
+       db.execSQL(querry);
+
+
+
+
+    }
+
+
 }

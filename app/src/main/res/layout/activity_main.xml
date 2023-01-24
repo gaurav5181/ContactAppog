@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context="Activity.MainActivity"
     android:orientation="vertical"
-    android:background="#5A5656">
+    android:background="@color/white">
 
     <ImageView
+        android:id="@+id/imageoo"
         android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_height="255dp"
         android:layout_gravity="center"
         android:layout_margin="50dp"
-        android:src="@drawable/contact">
+        android:src="@drawable/phonebb">
 
     </ImageView>
 
@@ -23,12 +24,11 @@
         android:id="@+id/ename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name:"
-        android:textColorHint="@color/white"
-        android:background="#2196F3"
         android:layout_margin="10dp"
+        android:background="#FFF59A"
+        android:hint="Name:"
         android:padding="10dp"
-        />
+        android:textColor="@color/black" />
 
     <EditText
 
@@ -36,24 +36,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Number:"
-        android:textColorHint="@color/white"
-        android:background="#03A9F4"
+        android:textColor="@color/black"
+        android:background="#FFF59A"
         android:layout_margin="10dp"
         android:padding="10dp">
 
     </EditText>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_gravity="center"
+    android:orientation="horizontal">
 
     <Button
 
         android:id="@+id/addbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="Add"
-        android:layout_marginTop="35sp"
         android:layout_gravity="center"
+        app:backgroundTint="@null"
+        android:background="#FFD711"
+        android:textColor="@color/black"
         >
 
 
     </Button>
+    <Button
+
+        android:id="@+id/showbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="show"
+        android:layout_gravity="center"
+        app:backgroundTint="@null"
+        android:background="#FFD711"
+        android:textColor="@color/black"
+
+
+        >
+
+
+    </Button>
+
+
+
+
+
+</LinearLayout>
+
 
 </LinearLayout>
