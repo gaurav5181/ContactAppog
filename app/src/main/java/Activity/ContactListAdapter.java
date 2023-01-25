@@ -1,6 +1,8 @@
 package Activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -83,14 +85,38 @@ public class ContactListAdapter extends BaseAdapter {
 
                         }else if(menuItem.getItemId()==R.id.menu_delete)
                         {
-                            DBHelper dbHelper = new DBHelper(activity);
-                            dbHelper.deletedat(id.get(i));
-                            id.remove(i);
-                            arrName.remove(i);
-                            arrcontact.remove(i);
-                            notifyDataSetChanged();
+                            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                            builder.setCancelable(false);
+                            builder.setTitle("Delete");
+                            builder.setMessage("you sure want to delete contact");
+                            builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i3)
+                                {
+                                    DBHelper dbHelper = new DBHelper(activity);
+                                    dbHelper.deletedat(id.get(i));
+                                    id.remove(i);
+                                    arrName.remove(i);
+                                    arrcontact.remove(i);
+                                    notifyDataSetChanged();
+
+
+
+                                }
+                            });
+                            builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.dismiss();
+                                }
+                            });
+                            AlertDialog alertDialog = builder.create();
+                            alertDialog.show();
+
 
                         }
+
+
                         return false;
                     }
                 });

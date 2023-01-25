@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.ContactApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#FFF53E</item>
-        <item name="colorPrimaryVariant">#EFC015</item>
+        <item name="colorPrimary">#61610D</item>
+        <item name="colorPrimaryVariant">#67655E</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

@@ -40,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     public Cursor viewdata()
     {
-          String query = "select * from Contacts";
+          String query = "select * from Contacts order by name collate nocase";
           SQLiteDatabase db = getReadableDatabase();
           Cursor cursor = db.rawQuery(query,null);
           return cursor;
